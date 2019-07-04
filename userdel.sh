@@ -7,4 +7,4 @@ read USERNAME
 
 . ./include/confirm.sh
 
-/usr/local/samba/bin/samba-tool user delete ${USERNAME}
+samba-tool user delete ${USERNAME}

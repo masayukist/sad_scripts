@@ -26,7 +26,7 @@ echo -----------------
 
 . ./include/confirm.sh
 
-/usr/local/samba/bin/samba-tool user create ${USERNAME} ${PASSWORD} \
+samba-tool user create ${USERNAME} ${PASSWORD} \
     --must-change-at-next-login \
     --surname="${SUR_NAME}" \
     --given-name="${GIVEN_NAME}" \
