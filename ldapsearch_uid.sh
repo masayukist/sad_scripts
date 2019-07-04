@@ -8,4 +8,4 @@ LDAPTLS_REQCERT=never ldapsearch \
 	-D ${LDAP_ADMIN} \
 	-w ${LDAP_ADMIN_PASS} \
 	-b ${LDAP_DN} \
-	 uid="${@}"
+	 uid="${1}"
