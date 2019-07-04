@@ -12,4 +12,4 @@ list_user_address () {
 	done
 }
 
-list_user_address | sort | uniq
+list_user_address | sort | uniq | sed  '/^$/d'
