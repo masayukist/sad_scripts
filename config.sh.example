@@ -1,0 +1,17 @@
+DOMAIN=hoge.fuga.test
+DOMAIN_NTSTYLE=HOGE
+
+LOGIN_HOST=hoge.fuga.test
+
+MAIL_FROM=who@hoge.fuga.test
+MAIL_BCC=who@hoge.fuga.test
+
+START_UID=100000
+START_GID=100000
+
+ADMIN_PASS="passw0rd"
+
+LDAP_URI=ldaps://dc01.hoge.fuga.test:636/
+LDAP_ADMIN=Administrator@hoge.fuga.test
+LDAP_ADMIN_PASS=${ADMIN_PASS}
+LDAP_DN="dc=hoge,dc=fuga,dc=test"
