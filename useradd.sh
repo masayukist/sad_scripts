@@ -37,7 +37,7 @@ echo -----------------
     --uid-number=${UID_NUMBER} \
     --gid-number=${GID_NUMBER} \
     --login-shell=/bin/bash \
-    --unix-home=/home/${DOMAIN}/${USERNAME}
+    --unix-home=${HOME_DIR_BASE}/${USERNAME}
 
 if test $? -ne 0
 then

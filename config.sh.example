@@ -15,3 +15,5 @@ LDAP_URI=ldaps://dc01.hoge.fuga.test:636/
 LDAP_ADMIN=Administrator@hoge.fuga.test
 LDAP_ADMIN_PASS=${ADMIN_PASS}
 LDAP_DN="dc=hoge,dc=fuga,dc=test"
+
+HOME_DIR_BASE=/home/${DOMAIN}
