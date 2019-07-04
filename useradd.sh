@@ -68,7 +68,6 @@ echo -e \
 # confirm the account
 while :
 do
-    # ./clear_cache.sh
     id ${USERNAME}
     if [ $? -eq 0 ]; then
 	echo ${USERNAME}\'s authentication information is updated.
