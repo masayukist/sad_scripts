@@ -7,7 +7,6 @@ MAX_ID=${START_GID}
 while [ 1 ]
 do
 	getent group ${MAX_ID} > /dev/null 2>&1
-	#wbinfo --gid-info ${MAX_ID} > /dev/null 2>&1
 	if [ $? -ne 0 ]
 	then
 		break
