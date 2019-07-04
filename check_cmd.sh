@@ -9,6 +9,9 @@ sed
 ldapsearch
 sss_cache
 systemctl
+pwgen
+getent
+id
 )
 
 for x in ${commands[@]}
