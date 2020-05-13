@@ -6,6 +6,8 @@ LOGIN_HOST=hoge.fuga.test
 MAIL_FROM=who@hoge.fuga.test
 MAIL_BCC=who@hoge.fuga.test
 
+MAIL_BODY_FROM="HOGE Cluster Admins"
+
 START_UID=100000
 START_GID=100000
 

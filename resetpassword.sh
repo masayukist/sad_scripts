@@ -33,10 +33,10 @@ echo -e \
     "Note:\n" \
     "This is the authentication system of the domain ${DOMAIN},\n" \
     "expressed by ${DOMAIN_NTSTYLE} in a NT domain style.\n" \
-    "This mail is automatically sent. Please do not reply to this mail.\n" \
+    "This mail is automatically sent.\n" \
     "\n" \
     "Regards,\n" \
-    "Domain Admins\n" | mail -s "Notification of a new password for the domain ${DOMAIN}" -r ${MAIL_FROM} -b ${MAIL_BCC} ${MAIL}
+    "${MAIL_BODY_FROM}\n" | mail -s "Notification of a new password for the domain ${DOMAIN}" -r ${MAIL_FROM} -b ${MAIL_BCC} ${MAIL}
 
 echo Reset password is ${PASSWORD}
 echo E-mail is sent to ${MAIL}

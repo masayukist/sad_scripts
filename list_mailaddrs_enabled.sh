@@ -21,8 +21,14 @@ list_user_address_ml () {
 		then
 			continue
 		fi
+		if [ "`./is_user_disabled.sh ${x}`" = "DISABLED" ]
+		then
+			PREFIX="# "
+		else
+			PREFIX=""
+		fi
 		echo \# ${x}
-		echo ${USER_ADDR}
+		echo ${PREFIX}${USER_ADDR}
 	done
 }
 
