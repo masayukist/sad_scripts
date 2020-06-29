@@ -2,4 +2,4 @@
 
 # this script should return only a single password sequence
 
-pwgen -1 -s 12
+pwgen -B -1 -s 12
