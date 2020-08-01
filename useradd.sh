@@ -76,3 +76,7 @@ do
     echo waiting the update of ${USERNAME}\'s authentication information ... retry after 5 seconds
     sleep 5
 done
+
+# set expiry
+echo "This user account will be expired in ${EXPIRE_DAYS} days."
+samba-tool user setexpiry --days=${EXPIRE_DAYS} ${USERNAME}

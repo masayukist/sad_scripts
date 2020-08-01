@@ -19,3 +19,5 @@ LDAP_ADMIN_PASS=${ADMIN_PASS}
 LDAP_DN="dc=hoge,dc=fuga,dc=test"
 
 HOME_DIR_BASE=/home/${DOMAIN}
+
+EXPIRE_DAYS=2190
