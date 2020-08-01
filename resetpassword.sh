@@ -4,12 +4,14 @@
 
 echo -n "${0}: login name? "
 read USERNAME
-echo -n "${0}: mail address? "
-read MAIL
 
 . ./include/confirm.sh
+. ./include/description.sh
+. ./include/mail.sh
 
 PASSWORD=`./include/passgen.sh`
+DESC_NAME=`description ${USERNAME}`
+MAIL=`mail ${USERNAME}`
 samba-tool user setpassword ${USERNAME} --newpassword=${PASSWORD} --must-change-at-next-login
 
 if test $? -ne 0
@@ -19,7 +21,7 @@ then
 fi
 
 echo -e \
-    "Dear user ${USERNAME},\n" \
+    "Dear ${DESC_NAME},\n" \
     "\n" \
     "Your account name and initial password are reset as below.\n" \
     "\n" \
