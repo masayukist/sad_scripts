@@ -1,12 +1,13 @@
 #!/bin/sh
 
-source ./util.sh
+source ./include/mail.sh
+source ./include/description.sh
 
 list_user_address_ml () {
 	USER_LIST=( `samba-tool user list` )
 	for x in ${USER_LIST[@]}
 	do
-		USER_ADDR=`user_address ${x}`
+		USER_ADDR=`mail ${x}`
 		if [ "$USER_ADDR" = "" ]
 		then
 			continue
@@ -15,7 +16,7 @@ list_user_address_ml () {
 		then
 			continue
 		fi
-		echo ${PREFIX}${USER_ADDR}   \# ${x} \(`user_description ${x}`\)
+		echo ${PREFIX}${USER_ADDR}   \# ${x} \(`description ${x}`\)
 	done
 }
 

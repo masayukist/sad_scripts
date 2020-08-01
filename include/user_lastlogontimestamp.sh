@@ -1,12 +1,12 @@
 #!/bin/sh
 
-source ./util.sh
+source ./include/lastlogontimestamp.sh
 
-LAST_LOGON_TIMESTAMP=`user_lastlogontimestamp ${1}`
+LAST_LOGON_TIMESTAMP=`lastlogontimestamp ${1}`
 
 if [ -z "${LAST_LOGON_TIMESTAMP}" ]
 then
-	echo No data
+	echo NODATA 
 	exit
 fi
 

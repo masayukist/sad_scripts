@@ -1,12 +1,12 @@
 #!/bin/sh
 
-source ./util.sh
+source ./include/pwdlastset.sh
 
-LAST_LOGON_TIMESTAMP=`user_pwdlastset ${1}`
+LAST_LOGON_TIMESTAMP=`pwdlastset ${1}`
 
 if [ -z "${LAST_LOGON_TIMESTAMP}" ]
 then
-	echo No data
+	echo NODATA
 	exit
 fi
 

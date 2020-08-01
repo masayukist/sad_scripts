@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source ./util.sh
+source ./include/description.sh
 
 list_user_disabled () {
 	USER_LIST=( `samba-tool user list` )
@@ -8,7 +8,7 @@ list_user_disabled () {
 	do
 		if [ "`./is_user_disabled.sh ${x}`" = "DISABLED" ]
 		then
-			echo ${x} \(`user_description ${x}`\)
+			echo ${x} \(`description ${x}`\)
 		fi
 	done
 }
