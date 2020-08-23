@@ -45,27 +45,13 @@ then
     exit
 fi
 
-echo -e \
-    "Dear ${GIVEN_NAME} ${SUR_NAME},\n" \
-    "\n" \
-    "Your account name and initial password are shown as below.\n" \
-    "\n" \
-    "username: ${USERNAME}\n" \
-    "password: ${PASSWORD}\n" \
-    "\n" \
-    "If you receive this mail, please login to ${LOGIN_HOST} \n"\
-    "by ssh protocol with the account written in this mail,\n" \
-    "and try to update the initial password to new one.\n" \
-    "\n" \
-    "Note:\n" \
-    "This is the authentication system of the domain ${DOMAIN},\n" \
-    "expressed by ${DOMAIN_NTSTYLE} in a NT domain style.\n" \
-    "This mail is automatically sent.\n" \
-    "\n" \
-    "Regards,\n" \
-    "${MAIL_BODY_FROM}\n" | mail -s "Notification of a new account on ${DOMAIN}" -r ${MAIL_FROM} -b ${MAIL_BCC} ${MAIL}
+eval "echo \"`cat templates/useradd_mail.txt`\"" > useradd_mail.tmp.txt
 
-# confirm the account
+cat useradd_mail.tmp.txt | mailx -s "Notification of a new account on ${DOMAIN}" -r ${MAIL_FROM} -b ${MAIL_BCC} ${MAIL}
+
+rm useradd_mail.tmp.txt
+
+confirm the account
 while :
 do
     id ${USERNAME}
@@ -77,6 +63,6 @@ do
     sleep 5
 done
 
-# set expiry
+set expiry
 echo "This user account will be expired in ${EXPIRE_DAYS} days."
 samba-tool user setexpiry --days=${EXPIRE_DAYS} ${USERNAME}

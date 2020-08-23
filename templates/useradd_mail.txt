@@ -1,0 +1,37 @@
+Dear ${GIVEN_NAME} ${SUR_NAME},
+
+Your account name and initial password are shown as below.
+
+ username: ${USERNAME}
+ password: ${PASSWORD}
+
+If you receive this mail, please immediately change this password to your new one.
+To change the password, please log into ${LOGIN_HOST} by SSH protocol.
+After logging in, you input the initial password and a new one as you are directed.
+
+Note:
+This is the authentication system of the domain ${DOMAIN},
+expressed by ${DOMAIN_NTSTYLE} in a NT domain style.
+This mail is automatically sent.
+
+Regards,
+${MAIL_BODY_FROM}
+----------
+
+${GIVEN_NAME} ${SUR_NAME}さん，
+
+あなたのアカウント名と初期パスワードは下記の通りです．
+
+ ユーザ名　: ${USERNAME}
+ パスワード: ${PASSWORD}
+
+このメールを受け取ったら，すぐに初期パスワードを自分のパスワードに更新してください．
+${LOGIN_HOST}にsshで初めてログインするとパスワードを更新することができます．
+ログインしたら初期パスワードと新しいパスワードを質問された通りに入力してください．
+
+お知らせ：
+本システムはドメイン${DOMAIN}の認証システムです．
+NTスタイルのドメイン名は${DOMAIN_NTSTYLE}です．
+このメールはシステムによって自動送信されました．
+
+${MAIL_BODY_FROM}より
