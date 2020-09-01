@@ -51,18 +51,18 @@ cat useradd_mail.tmp.txt | mailx -s "Notification of a new account on ${DOMAIN}"
 
 rm useradd_mail.tmp.txt
 
-confirm the account
-while :
-do
-    id ${USERNAME}
-    if [ $? -eq 0 ]; then
-	echo ${USERNAME}\'s authentication information is updated.
-	break
-    fi
-    echo waiting the update of ${USERNAME}\'s authentication information ... retry after 5 seconds
-    sleep 5
-done
+#confirm the account
+#while :
+#do
+#    id ${USERNAME}
+#    if [ $? -eq 0 ]; then
+#	echo ${USERNAME}\'s authentication information is updated.
+#	break
+#    fi
+#    echo waiting the update of ${USERNAME}\'s authentication information ... retry after 5 seconds
+#    sleep 5
+#done
 
-set expiry
+#set expiry
 echo "This user account will be expired in ${EXPIRE_DAYS} days."
 samba-tool user setexpiry --days=${EXPIRE_DAYS} ${USERNAME}
