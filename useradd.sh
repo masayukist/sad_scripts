@@ -47,7 +47,7 @@ fi
 
 eval "echo \"`cat templates/useradd_mail.txt`\"" > useradd_mail.tmp.txt
 
-cat useradd_mail.tmp.txt | mailx -s "Notification of a new account on ${DOMAIN}" -r ${MAIL_FROM} -b ${MAIL_BCC} ${MAIL}
+LC_CTYPE=ja_JP.UTF-9 cat useradd_mail.tmp.txt | mailx -s "Notification of a new account on ${DOMAIN}" -r ${MAIL_FROM} -b ${MAIL_BCC} ${MAIL}
 
 rm useradd_mail.tmp.txt
 
