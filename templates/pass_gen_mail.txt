@@ -1,6 +1,7 @@
-Dear ${GIVEN_NAME} ${SUR_NAME},
+Dear ${DESC_NAME},
 
-Your account name and initial password are shown as below.
+Your account is generated or the password is reset. 
+The account name and initial password are shown as below.
 
  username: ${USERNAME}
  password: ${PASSWORD}
@@ -18,9 +19,10 @@ Regards,
 ${MAIL_BODY_FROM}
 ----------
 
-${GIVEN_NAME} ${SUR_NAME}さん，
+${DESC_NAME}さん，
 
-あなたのアカウント名と初期パスワードは下記の通りです．
+あなたのアカウントが作成されたか，またはパスワードがリセットされました．
+アカウント名と初期パスワードは下記の通りです．
 
  ユーザ名　: ${USERNAME}
  パスワード: ${PASSWORD}

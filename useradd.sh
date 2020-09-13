@@ -16,6 +16,7 @@ echo -n "${0}: mail address? "
 read MAIL
 
 PASSWORD=`./include/passgen.sh`
+DESC_NAME="${GIVEN_NAME} ${SUR_NAME}"
 
 echo -----------------
 echo New User: $USERNAME
@@ -45,7 +46,7 @@ then
     exit
 fi
 
-eval "echo \"`cat templates/useradd_mail.txt`\"" > useradd_mail.tmp.txt
+eval "echo \"`cat templates/pass_gen_mail.txt`\"" > useradd_mail.tmp.txt
 
 LC_CTYPE=ja_JP.UTF-9 cat useradd_mail.tmp.txt | mailx -s "Notification of a new account on ${DOMAIN}" -r ${MAIL_FROM} -b ${MAIL_BCC} ${MAIL}
 

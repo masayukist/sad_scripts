@@ -29,7 +29,7 @@ then
     exit
 fi
 
-eval "echo \"`cat templates/reset_password.txt`\"" > reset_password_mail.tmp.txt
+eval "echo \"`cat templates/pass_gen_mail.txt`\"" > reset_password_mail.tmp.txt
 
 LC_CTYPE=ja_JP.UTF-9 cat reset_password_mail.tmp.txt | mailx -s "Notification of a new password for the domain ${DOMAIN}" -r ${MAIL_FROM} -b ${MAIL_BCC} ${MAIL_ADDR}
 
