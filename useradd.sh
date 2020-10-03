@@ -67,3 +67,8 @@ rm useradd_mail.tmp.txt
 #set expiry
 echo "This user account will be expired in ${EXPIRE_DAYS} days."
 samba-tool user setexpiry --days=${EXPIRE_DAYS} ${USERNAME}
+
+for x in ./useradd.d/*.sh
+do
+    . ${x}
+done
