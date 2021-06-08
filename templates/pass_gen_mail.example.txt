@@ -11,12 +11,10 @@ To change the password, please log into ${LOGIN_HOST} by SSH protocol.
 After logging in, you input the initial password and a new one as you are directed.
 
 Note:
-This is the authentication system of the domain ${DOMAIN},
-expressed by ${DOMAIN_NTSTYLE} in a NT domain style.
 This mail is automatically sent.
 
 Regards,
-${MAIL_BODY_FROM}
+Administrators
 ----------
 
 ${DESC_NAME}さん，
@@ -32,8 +30,6 @@ ${LOGIN_HOST}にsshで初めてログインするとパスワードを更新す�
 ログインしたら初期パスワードと新しいパスワードを質問された通りに入力してください．
 
 お知らせ：
-本システムはドメイン${DOMAIN}の認証システムです．
-NTスタイルのドメイン名は${DOMAIN_NTSTYLE}です．
 このメールはシステムによって自動送信されました．
 
-${MAIL_BODY_FROM}より
+管理者より

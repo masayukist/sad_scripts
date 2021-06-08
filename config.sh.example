@@ -5,8 +5,7 @@ LOGIN_HOST=hoge.fuga.test
 
 MAIL_FROM=who@hoge.fuga.test
 MAIL_BCC=who@hoge.fuga.test
-
-MAIL_BODY_FROM="HOGE Cluster Admins"
+MAIL_TITLE="Notification about your account: sky.sc.cc.tohoku.ac.jp"
 
 START_UID=100000
 START_GID=100000
