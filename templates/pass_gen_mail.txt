@@ -8,7 +8,7 @@ The account name and initial password are shown as below.
 
 If you receive this mail, please immediately change this password to your new one.
 To change the password, please log into ${LOGIN_HOST} by SSH protocol.
-After logging in, you input the initial password and a new one as you are directed.
+After logging in, you should input the initial password and a new one as you are directed.
 
 Note:
 This is the authentication system of the domain ${DOMAIN},
