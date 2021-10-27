@@ -8,6 +8,13 @@ GID_NUMBER=${START_GID}
 
 echo -n "${0}: login name? "
 read USERNAME
+
+STDOUT=`id ${USERNAME} 2>&1`
+if [ ${?} = 0 ]; then
+    echo Username ${USERNAME} is already used. Please specify another username.
+    exit 1
+fi
+
 echo -n "${0}: sur(family) name? "
 read SUR_NAME
 echo -n "${0}: given(first) name? "
@@ -48,7 +55,7 @@ fi
 
 eval "echo \"`cat templates/pass_gen_mail.txt`\"" > useradd_mail.tmp.txt
 
-LC_CTYPE=ja_JP.UTF-9 cat useradd_mail.tmp.txt | mailx -s "Notification of a new account on ${DOMAIN}" -r ${MAIL_FROM} -b ${MAIL_BCC} ${MAIL}
+LC_CTYPE=ja_JP.UTF-9 cat useradd_mail.tmp.txt | mailx -s "${MAIL_TITLE}" -r ${MAIL_FROM} -b ${MAIL_BCC} ${MAIL}
 
 rm useradd_mail.tmp.txt
 
