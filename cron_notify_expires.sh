@@ -33,4 +33,4 @@ get_enable_user_expiration () {
 	done
 }
 
-get_enable_user_expiration
+get_enable_user_expiration > cron_notify_expires.log
