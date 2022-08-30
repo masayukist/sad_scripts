@@ -1,0 +1,20 @@
+Dear Administrators,
+
+The account will be expired soon.
+
+ username: ${USERNAME} (${USER_DESC})
+
+Note:
+This mail is automatically sent.
+
+----------
+
+管理者各位，
+
+下記のアカウントは間も無く期限切れとなります．
+
+ ユーザ名: ${USERNAME} (${USER_DESC})
+
+お知らせ：
+このメールはシステムによって自動送信されました．
+

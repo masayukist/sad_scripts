@@ -15,4 +15,4 @@ list_user_enabled () {
 	done
 }
 
-list_user_enabled
+list_user_enabled | tee list_timestamp_expires.log
