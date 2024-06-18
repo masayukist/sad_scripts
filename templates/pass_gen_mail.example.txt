@@ -1,7 +1,7 @@
 Dear ${DESC_NAME},
 
-Your account is generated or the password is reset. 
-The account name and initial password are shown as below.
+Your account is generated, or the password is reset. 
+The account name and initial password are shown below.
 
  username: ${USERNAME}
  password: ${PASSWORD}
