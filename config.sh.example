@@ -4,9 +4,9 @@ DOMAIN_NTSTYLE=HOGE
 LOGIN_HOST=hoge.fuga.test
 
 MAIL_FROM=who@hoge.fuga.test
-MAIL_TITLE="Notification about your account: sky.sc.cc.tohoku.ac.jp"
+MAIL_TITLE="Notification about your account: hoge.fuga.test"
 EXPIRE_MAIL_TO=who@hoge.fuga.test
-EXPIRE_MAIL_TITLE="Notification of expiration: gp.sc.cc.tohoku.ac.jp"
+EXPIRE_MAIL_TITLE="Notification of expiration: hoge.fuga.test"
 MAIL_BCC=admins@hoge.fuga.test
 
 START_UID=100000
